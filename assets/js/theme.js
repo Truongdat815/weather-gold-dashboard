@@ -17,3 +17,22 @@ toggleButton.addEventListener('click', () => {
 document.body.classList.toggle('dark-mode');
 }
 )
+// Toggle dark mode
+function toggleDarkMode() {
+  var body = document.body;
+  body.classList.toggle('dark-mode');
+}
+function toggleDarkMode() {
+  var body = document.body;
+  body.classList.toggle('dark-mode');
+}
+function toggleDarkMode() {
+  const body = document.body;
+  if (localStorage.getItem('darkMode') === 'true') {
+     localStorage.setItem('darkMode', 'false');
+     body.classList.remove('dark-mode');
+   } else {
+     localStorage.setItem('darkMode', 'true');
+     body.classList.add('dark-mode');
+   }
+}

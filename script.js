@@ -351,3 +351,9 @@ Sử dụng local storage để lưu trạng thái của phản hồi và gọi 
 // Tính năng tìm kiếm 
 <input type='text' id='search-bar' placeholder='Tìm theo tên thành phố...'/>
 <button id='search-btn'>Tìm kiếm</button>
+
+// Tính năng lưu trữ 
+Lưu trữ dữ liệu thời tiết và giao diện người dùng sử dụng các lựa chọn đã lưu.
+
+// Tính năng báo lỗi khi API Key bị sai 
+const CONFIG = {... 'YOUR_OPENWEATHER_API_KEY',  // Thay key của bạn vào đây ...};
