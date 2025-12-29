@@ -288,3 +288,51 @@ Bạn cũng có thể sử dụng `window.addEventListener('error', function(eve
 
 // Tính năng tìm kiếm 
 Đoạn mã HTML
+
+// Tính năng tìm kiếm 
+Bổ sung một ô điều khiển tìm kiếm ở phần header của trang web. Khi người dùng nhập vào một từ khoá, sẽ có thể lọc ra các phần tử liên quan đến TP.HCM từ danh sách toàn bộ và hiện chúng trong khu vực hiển thị của trang web.
+
+// Tính năng đánh giá 
+Suggestions for the implementation of this feature would involve adding a live rating system to each weather update card, giving users an option to rate and review the quality of the weather updates presented on the page.
+
+// Tính năng xác nhận đã tải 
+Bổ sung hàm showSuccessNotification() ở cuối file script.js
+
+// Tính năng tiện ích màn hình 
+<input type='button' value='Refresh' id='refresh-btn'/>
+
+els.refreshBtn.addEventListener('click', function() {
+    updateWeather();
+});
+
+
+// Tính năng đánh giá người dùng 
+```javascript
+// Tích hợp phần mềm đánh giá người dùng
+let userRating = {"weather": 0, "UI/UX": 0};
+const ratingSection = `<section class="card user-rating-card">
+    <div class="card-header">
+        <h2><i class="fas fa-star"></i> Đánh giá người dùng</h2>
+    </div>
+    <div class="card-body" id="user-rating">
+        <p>Đang tải đánh giá...</p>
+    </div>
+</section>`;
+document.querySelector(".dashboard-grid").insertAdjacentHTML("beforeend", ratingSection);
+const userRatingEl = document.getElementById('user-rating');
+function updateUserRating() {
+    let total = 0, count = 0;
+    for (let key in userRating) {
+        if (userRating[key] !== 0) {
+total += userRating[key];
+count++;
+}
+}
+let average = (total / count).toFixed(2);
+userRatingEl.innerHTML = `<p>Đánh giá trung bình của người dùng là: ${average}</p>`;
+}
+// Có thể tính điểm ở ĐÁNH GI� THỜI TIẾT và UI/UX...
+```
+
+// Tính năng báo lỗi khi API key không hợp lệ 
+Dòng code sau đây sẽ thêm một bản chặn đầu dòng khi API key của bạn không hợp lệ:

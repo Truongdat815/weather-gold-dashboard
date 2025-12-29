@@ -1,0 +1,3 @@
+// Code JS module toàn bộ logic...
+ import Chart from 'Chart.js'; 
+ // Sau đó, thêm code xử lý tất cả những gì cần thiết vào module này.
