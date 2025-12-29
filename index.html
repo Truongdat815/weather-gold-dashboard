@@ -142,5 +142,62 @@
     <span class="slider round"></span>
   </label>
 </div>
+
+<!-- Auto: Tính năng chia sẽ -->
+<div class='share-button'>
+  <a href='https://twitter.com/intent/tweet?text=Tên%20trang%3A%20TP.HCM%20Dashboard%20%7C%20Link%3A%20[Đường%20dẫn%20tới%20trang]' target='_blank'>
+    <i class='fab fa-twitter'></i> Chia sẽ bằng Twitter
+  </a>
+</div>
+
+<!-- Auto: Tính năng tìm kiếm -->
+<div class='search-container'>
+  <input type='text' id='search-bar' placeholder='Tìm kiếm...' onkeyup='filterFunction()'/>
+  <button onclick='clearSearch()'>Xóa</button>
+</div>
+<script src="assets/js/chart_module.js"></script>
+<!-- Auto: Tính năng lưu trữ trang web -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-<｜begin▁of▁sentence｜>8">
+
+<!-- Auto: Tính năng tiện ích khi người dùng di chuyển qua các phần trang web -->
+<div class="card feedback-card">
+        <div class="card-header">
+            <h2><i class="fas fa-comments"></i> Phản hồi và ý kiến của người dùng</h2>
+        </div>
+        <div class="card-body feedback-form" id="feedback-content">
+            <form onSubmit="event.preventDefault(); handleFeedbackForm(this);">
+                <label for="name">Tên:</label><br />
+                <input type="text" id="name" name="name" required /><br />
+                <label for="email">Email:</label><br />
+                <input type="email" id="email" name="email" required /><br />
+                <label for="feedback">Phản hồi của bạn:</label><br />
+                <textarea id="feedback" name="feedback" required ></textarea><br />
+                <button type="submit" class="btn primary-btn">Gửi phản hồi</button>
+            </form>
+        </div>
+    </div>
+<script src="assets/js/currency-converter.js"></script><script src="assets/js/theme.js"></script>
+<!-- Auto: Tính năng dựa trên lịch sử ngày -->
+<div id="history-content">
+    <h2><i class="fas fa-clock"></i> Lịch sử ngày</h2>
+    <ul id="day-history"></ul>
+</div>
+
+<script>
+    function addToHistory(date, summary) {
+        const historyList = document.getElementById('day-history');
+        const newItem = document.createElement('li');
+        newItem.textContent = `${formatDate(date)}: ${summary}`;
+        historyList.appendChild(newItem);
+    }
+
+    window.onload = function() {
+        const now = new Date();
+        addToHistory(now, 'Trang web được tải');
+    };
+</script>
 </body>
 </html>

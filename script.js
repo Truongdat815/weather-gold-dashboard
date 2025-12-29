@@ -336,3 +336,18 @@ userRatingEl.innerHTML = `<p>Đánh giá trung bình của người dùng là: $
 
 // Tính năng báo lỗi khi API key không hợp lệ 
 Dòng code sau đây sẽ thêm một bản chặn đầu dòng khi API key của bạn không hợp lệ:
+
+// Tính năng cho phép tải lại trang 
+```javascript
+function autoRefresh() {
+
+
+// Tính năng báo lỗi cho người dùng 
+Bên trong hàm updateWeather, sau khi gọi API để lấy thông tin và xử lý nó, bạn có thể thêm một đoạn code để kiểm tra trạng thái của phản hồi từ API. Nếu có lỗi, bạn có thể hiện nó cho người dùng biết.
+
+// Tính năng đánh giá 
+Sử dụng local storage để lưu trạng thái của phản hồi và gọi API một lần duy nhất. Lưu ý rằng việc đánh giá cần phải có sẵn trong tập tin.
+
+// Tính năng tìm kiếm 
+<input type='text' id='search-bar' placeholder='Tìm theo tên thành phố...'/>
+<button id='search-btn'>Tìm kiếm</button>
