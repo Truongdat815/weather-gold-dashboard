@@ -18,3 +18,5 @@ temperatureWarning.style.display = 'none';
 weatherData.getWeather().then(data => {
 updateTemperatureWarning(25);
 });
+// Expose functions to global scope for HTML onclick
+window.updateTemperatureWarning = updateTemperatureWarning;

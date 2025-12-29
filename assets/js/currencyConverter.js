@@ -22,3 +22,6 @@ function CurrencyConversion(from, to) {
 function currencyConversion(from, to, amount) {
     // Code để chuyển đổi tiền tệ
 }
+// Expose functions to global scope for HTML onclick
+window.CurrencyConversion = CurrencyConversion;
+window.currencyConversion = currencyConversion;

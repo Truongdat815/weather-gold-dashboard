@@ -12,3 +12,6 @@ async function fetchNewsData() {
 function updateFeed(data) {
   // Update your news feed using the data from API response
 }
+// Expose functions to global scope for HTML onclick
+window.fetchNewsData = fetchNewsData;
+window.updateFeed = updateFeed;

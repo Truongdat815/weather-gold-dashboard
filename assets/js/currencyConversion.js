@@ -12,3 +12,5 @@ function convertCurrency() {
             result = amount * rate;
         });
 }
+// Expose functions to global scope for HTML onclick
+window.convertCurrency = convertCurrency;

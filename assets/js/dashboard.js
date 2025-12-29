@@ -5,3 +5,5 @@ function refreshForecast() {
 	  .then(data => displayForecast(data)) 
 	  .catch((error) => console.log('Error:', error));
 }
+// Expose functions to global scope for HTML onclick
+window.refreshForecast = refreshForecast;

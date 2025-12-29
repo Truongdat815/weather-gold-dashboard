@@ -36,3 +36,9 @@ function toggleDarkMode() {
      body.classList.add('dark-mode');
    }
 }
+// Expose functions to global scope for HTML onclick
+window.toggleDarkMode = toggleDarkMode;
+window.toggleDarkMode = toggleDarkMode;
+window.toggleDarkMode = toggleDarkMode;
+window.toggleDarkMode = toggleDarkMode;
+window.toggleDarkMode = toggleDarkMode;

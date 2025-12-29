@@ -365,3 +365,22 @@ function saveStateToLocalStorage() {
 
 // Tính năng điều khiển người dùng 
 Bạn có thể thêm một tính năng đánh giá cho trang web của mình không? Người dùng có thể đánh giá sản phẩm hoặc dịch vụ mà họ sử dụng không? Bạn có thể làm cho người dùng cung cấp nhận xét và đánh giá?
+// Expose functions to global scope for HTML onclick
+window.formatTime = formatTime;
+window.formatDate = formatDate;
+window.formatCurrency = formatCurrency;
+window.initTheme = initTheme;
+window.startClock = startClock;
+window.update = update;
+window.getMockWeather = getMockWeather;
+window.getMockFinance = getMockFinance;
+window.fetchWeather = fetchWeather;
+window.renderWeather = renderWeather;
+window.fetchFinance = fetchFinance;
+window.renderFinance = renderFinance;
+window.refreshAll = refreshAll;
+window.init = init;
+window.handleError = handleError;
+window.updateUserRating = updateUserRating;
+window.autoRefresh = autoRefresh;
+window.saveStateToLocalStorage = saveStateToLocalStorage;

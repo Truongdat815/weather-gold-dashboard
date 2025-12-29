@@ -154,7 +154,7 @@ document.getElementById('weatherInfo').innerHTML = `Nhiệt độ: ${data.main.t
                          				<i class="fas fa-moon"></i>
                      			 </div>
                      </label>
-<script src="assets/js/gold_chart.js"></script>
+<script type="module" src="assets/js/gold_chart.js"></script>
 <!-- Auto: Tính năng thay đổi giao diện -->
 <link rel="stylesheet" href="toggle-style.css">
 
@@ -260,8 +260,20 @@ document.getElementById('weatherInfo').innerHTML = `Nhiệt độ: ${data.main.t
 
 <!-- Auto: Tính năng đánh giá -->
 <div class='rating-card card'><div class='card-header'><h2><i class="fas fa-star"></i> Đánh giá của khách hàng</h2><span id='customer-rating-last-update'>--:--</span></div><div class='card-body' id='customer-rating-content'><div class='loading-spinner'><i class="fas fa-spinner fa-spin"></i> Đang tải dữ liệu...</div></div></div>
-<script src="assets/js/weatherDashboard.module.js"></script><script src="assets/js/weatherDataModule.js"></script>
+<script type="module" src="assets/js/weatherDashboard.module.js"></script><script type="module" src="assets/js/weatherDataModule.js"></script>
 <!-- Auto: Tính năng đo mắt -->
 <div class='eye-tracker-container'><canvas id='eyeTracker' width='500' height='500'></canvas><p>Diện tích tôi nhìn: <span id='areaOfSight'>0</span>%</p></div><script>let ctx = document.getElementById('eyeTracker').getContext('2d'); let w = window.innerWidth; let h = window.innerHeight; new Eye().init(ctx, w, h);</script>
-<script src="assets/js/dashboard.js"></script></body>
+<script src="assets/js/dashboard.js"></script>
+<!-- Auto: Tính năng đánh giá thời tiết -->
+
+
+<div class="card weather-card">
+    <div class="card-header">
+        <h2><i class="fas fa-cloud-sun"></i> Thời Tiết</h2>
+        <span class="refresh-badge" id="weather-last-update" style="cursor: pointer; color: var(--primary-color); transition: color 0.3s;" onclick="getWeather()">Đánh giá thời tiết</span>
+    </div>
+    <div class="card-body" id="weather-content"></div>
+</div>
+
+</body>
 </html>

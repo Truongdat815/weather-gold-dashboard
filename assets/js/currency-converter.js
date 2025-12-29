@@ -23,3 +23,5 @@ const convertCurrency = async (from, to, amount) => {
 
   return amount * data.rates[to];
 };
+// Expose functions to global scope for HTML onclick
+window.displayCurrencyData = displayCurrencyData;

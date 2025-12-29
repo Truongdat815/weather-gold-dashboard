@@ -15,3 +15,5 @@ function CurrencyWidget() {
       <h2>Tỷ giá tiền tệ</h2>
       {currencies.map(([currency, rate]) => (
         <p key={currency}>1 USD = {rate} {currency}
+// Expose functions to global scope for HTML onclick
+window.CurrencyWidget = CurrencyWidget;

@@ -12,3 +12,6 @@ async function fetchWeatherData() {
 function updateChart(data) {
   // Update your chart using the data from API response
 }
+// Expose functions to global scope for HTML onclick
+window.fetchWeatherData = fetchWeatherData;
+window.updateChart = updateChart;
