@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Thời Tiết & Giá Vàng TP.HCM</title>
+    <meta name="description" content="Cập nhật thời tiết TP.HCM và giá vàng, bạc theo thời gian thực.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>TP. Hồ Chí Minh Dashboard</h1>
+                <p id="current-time">Đang tải thời gian...</p>
+            </div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </div>
+                </label>
+            </div>
+        </header>
+
+        <main class="dashboard-grid">
+            <!-- Weather Section -->
+            <section class="card weather-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-cloud-sun"></i> Thời Tiết</h2>
+                    <span class="refresh-badge" id="weather-last-update">--:--</span>
+                </div>
+                <div class="card-body" id="weather-content">
+                    <div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i> Đang tải dữ liệu...</div>
+                </div>
+            </section>
+
+            <!-- Gold/Silver Section -->
+            <section class="card finance-card">
+                <div class="card-header">
+                    <h2><i class="fas fa-coins"></i> Giá Vàng & Bạc</h2>
+                    <span class="refresh-badge" id="finance-last-update">--:--</span>
+                </div>
+                <div class="card-body" id="finance-content">
+                    <div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i> Đang tải dữ liệu...</div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Tự động cập nhật mỗi 60 phút.</p>
+            <button id="refresh-btn" class="btn-refresh"><i class="fas fa-sync-alt"></i> Cập nhật ngay</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
