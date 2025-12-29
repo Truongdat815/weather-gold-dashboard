@@ -258,3 +258,33 @@ function init() {
 
 // Start
 init();
+
+
+// Tính năng báo lỗi khi có lỗi 
+```javascript
+// Hàm xử lý lỗi.
+function handleError(err) {
+   console.error('Đã xảy ra lỗi:', err);
+}
+
+fetch('https://api.example.com/data')
+  .then(response => {
+    if (!response.ok) throw new Error('Lỗi ' + response.status);
+    return response.json();
+  })
+  .catch(err => handleError(err));
+```
+
+// Tính năng báo lỗi 
+Thêm một hàm xử lý lỗi đơn giản ở cuối script.js, sẽ hiển thị báo lỗi khi có lỗi xảy ra. Ví dụ như:
+
+```javascript
+window.onerror = function(msg, url, lineNo, columnNo, errorObj) {
+    alert('Lỗi: ' + msg + '\n URL: ' + url + '\n Dòng: ' + lineNo);
+    return true;
+};
+```
+Bạn cũng có thể sử dụng `window.addEventListener('error', function(event) {...});` để theo dõi lỗi xảy ra từ bên ngoài, hoặc `window.onunhandledrejection = function(promiseRejectionEvent) {...};` để theo dõi Promise rejections.
+
+// Tính năng tìm kiếm 
+Đoạn mã HTML

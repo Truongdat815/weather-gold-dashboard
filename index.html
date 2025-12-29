@@ -76,5 +76,52 @@
             <!-- Đoạn code cho phép hiển thị đồng hồ Analog -->
         </div>
     </section>
+
+<!-- Auto: Tính năng tìm kiếm thời tiết -->
+
+
+<div class="card weather-search-bar">
+    <input type="text" id="weather-search-query" placeholder="Tìm kiếm thành phố..."/>
+    <button id="refresh-btn" onclick="getWeather()"><i class='fas fa-redo-alt'></i></button>
+</div>
+
+<!-- Auto: Tính năng tự động lưu lại bảng điều khiển -->
+<input type='checkbox' id='save-controls' /><label for='save-controls'>Lưu lại các tùy chọn điều khiển</label><script>document.getElementById('checkbox').addEventListener('change', (e) => { if (e.target.checked) { localStorage.setItem('theme', document.documentElement.getAttribute('data-theme')); } else { document.documentElement.removeAttribute('data-theme'); } }); if (localStorage.getItem('theme')) { document.documentElement.setAttribute('data-theme', localStorage.getItem('theme')); }</script>
+
+<!-- Auto: Tính năng Bảng tin tức -->
+<section class="card news-card">
+        <div class="card-header">
+            <h2><i class="fas fa-newspaper"></i> Bảng tin tức</h2>
+            <span class="refresh-badge" id="news-last-update">--:--</span>
+        </div>
+        <div class="card-body" id="news-content">
+            <div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i> Đang tải dữ liệu...</div>
+        </div>
+    </section>
+
+<!-- Auto: Tính năng tìm kiếm -->
+<div class="search-card card">
+        <div class="card-header">
+            <h2><i class="fas fa-search"></i> Tìm kiếm</h2>
+            <form id="search-form">
+                <input type="text" name="search" placeholder="Tìm kiếm..." required>
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+
+<!-- Auto: Tính năng danh mục -->
+<div class="card category-card">
+        <div class="card-header">
+            <h2><i class="fas fa-list-ul"></i> Danh mục</h2>
+            <span class="refresh-badge" id="category-last-update">--:--</span>
+        </div>
+        <div class="card-body" id="category-content">
+            <div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i> Đang tải dữ liệu...</div>
+        </div>
+    </div>
+
+<!-- Auto: Tính năng tạm biệt -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </body>
 </html>
