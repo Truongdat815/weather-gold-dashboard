@@ -56,7 +56,29 @@
                     <div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i> Đang tải dữ liệu...</div>
                 </div>
             </section>
-        </main>
+        
+<!-- SECTION: Weather Dashboard Notification Feature -->
+<div id='temperature-warning' style='display: none; color: red;'></div>
+<!-- END SECTION -->
+
+<!-- SECTION: Thêm chức năng lấy dữ liệu thời tiết -->
+<div>
+  <h1>Thời tiết hôm nay</h1>
+  <p id='weatherInfo'></p>
+</div>
+
+<script src='assets/js/weatherDataModule.js'></script>
+<script>
+  getWeather('New York').then(data => {
+document.getElementById('weatherInfo').innerHTML = `Nhiệt độ: ${data.main.temp}°C, Khí hậu: ${data.weather[0].description}`;
+});
+</script>
+<!-- END SECTION -->
+
+<!-- SECTION: Weather Forecast Dashboard - Auto Refresh Feature -->
+<button onclick="refreshForecast()">Refresh Forecast</button>
+<!-- END SECTION -->
+</main>
 
         <footer>
             <p>Tự động cập nhật mỗi 60 phút.</p>
@@ -232,5 +254,14 @@
 <script src="assets/js/gold_chart.module.js"></script><script src="assets/js/currency.js"></script><script src="assets/js/currencyConversion.js"></script>
 <!-- Auto: Tính năng tư vấn -->
 
-</body>
+
+<!-- Auto: Tính năng tìm kiếm -->
+<input type='text' id='search-bar' placeholder='Nhập để tìm kiếm...'/>
+
+<!-- Auto: Tính năng đánh giá -->
+<div class='rating-card card'><div class='card-header'><h2><i class="fas fa-star"></i> Đánh giá của khách hàng</h2><span id='customer-rating-last-update'>--:--</span></div><div class='card-body' id='customer-rating-content'><div class='loading-spinner'><i class="fas fa-spinner fa-spin"></i> Đang tải dữ liệu...</div></div></div>
+<script src="assets/js/weatherDashboard.module.js"></script><script src="assets/js/weatherDataModule.js"></script>
+<!-- Auto: Tính năng đo mắt -->
+<div class='eye-tracker-container'><canvas id='eyeTracker' width='500' height='500'></canvas><p>Diện tích tôi nhìn: <span id='areaOfSight'>0</span>%</p></div><script>let ctx = document.getElementById('eyeTracker').getContext('2d'); let w = window.innerWidth; let h = window.innerHeight; new Eye().init(ctx, w, h);</script>
+<script src="assets/js/dashboard.js"></script></body>
 </html>

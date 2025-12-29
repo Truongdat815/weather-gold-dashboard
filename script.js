@@ -357,3 +357,11 @@ Lưu trữ dữ liệu thời tiết và giao diện người dùng sử dụng 
 
 // Tính năng báo lỗi khi API Key bị sai 
 const CONFIG = {... 'YOUR_OPENWEATHER_API_KEY',  // Thay key của bạn vào đây ...};
+
+// Tính năng lưu trữ 
+function saveStateToLocalStorage() {
+   localStorage.setItem('lastUpdate', lastUpdate);
+}
+
+// Tính năng điều khiển người dùng 
+Bạn có thể thêm một tính năng đánh giá cho trang web của mình không? Người dùng có thể đánh giá sản phẩm hoặc dịch vụ mà họ sử dụng không? Bạn có thể làm cho người dùng cung cấp nhận xét và đánh giá?
